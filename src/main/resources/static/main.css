@@ -1,0 +1,13 @@
+a:link{text-decoration:none; color:gray;}
+a:visited{text-decoration:none; color:gray;}
+a:hover{text-decoration:underline; color:salmon;}
+
+table,td{
+    border:1px solid gray;
+    border-collapse:collapse;
+    font-size:9pt;
+    color:#333;
+}
+tr:nth-child(odd) {
+    background:pink;
+}

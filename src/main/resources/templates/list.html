@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<h1 th:text="'상품목록'"/>
+<table width="400px">
+    <tr><td>book_id</td><td>book_title</td><td>book_price</td><td>ETC</td></tr>
+    <tr th:each="p:${list1}">
+        <td th:text="${p.book_id}"/>
+        <td th:text="${p.book_title}"/>
+        <td th:text="${p.book_price}"/>
+        <td><a th:href="@{'/update/'+${p.book_id}}">수정</a>
+            <a th:href="@{'/delete/'+${p.book_id}}">삭제</a>
+        </td>
+    </tr>
+</table>
+<a href="/add">책등록</a>
+</body>
+</html>

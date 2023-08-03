@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<h1 th:text="'책 수정'"/>
+<form method="post" action="/update_done" th:object="${dto}">
+  <!-- 숨겨진 필드로 book_id 값을 전송 -->
+  <input type="hidden" name="book_id" th:value="*{book_id}" />
+  책 제목<input type="text" name="book_title" th:field="*{book_title}"><br>
+  책 가격<input type="text" name="book_price" th:field="*{book_price}"><br>
+  <button type="submit">수정완료</button>
+</form>
+</body>
+</html>
